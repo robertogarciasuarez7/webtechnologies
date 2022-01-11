@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+    url: jdbc:postgresql://localhost:5432/asi
+    username: asi
+    password: asi
+  jpa:
+    show-sql: true
+    # create      => crea la base de datos desde 0 cada vez que se lanza el proyecto, borrando todo
+    # create-drop => crea la base de datos desde 0 cada vez que se lanza el proyecto, borrando todo
+    #                también borra todo cuando el proyecto deja de ejecutarse, dejando la BD vacía
+    # update      => actualiza el esquema según lo vaya necesitando, sin borrar nada
+    #                puede causar problemas, que se solucionarían borrando la base de datos a mano
+    # validate    => no hace nada, espera que sea el usuario el que gestione la base de datos
+    #                y simplemente valida el esquema al iniciarse la aplicación
+    #                si se usan sql de creación e inserción de datos sería la modalidad a usar
+    hibernate.ddl-auto: update
+properties:
+  clientHost: http://localhost:1234
+  jwtSecretKey: sertyerhgsfdgbsdretherthbdfgbdfhdrydasdfasdfasdfasdf
+  jwtValidity: 7200
+  imagesPath: C:\\Users\\Public\\Pictures\
+
